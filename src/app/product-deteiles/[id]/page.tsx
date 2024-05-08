@@ -10,7 +10,7 @@ const ProductDetailes = () => {
         <div className="container mx-auto flex  pt-28 flex-wrap min-[800px]:flex-nowrap pb-48 justify-between">
           <div
             onClick={() => root.back()}
-            className="absolute z-10 top-10 text-black text-2xl dark:text-white flex items-center gap-2 cursor-pointer"
+            className="absolute  top-10 text-black text-2xl dark:text-white flex items-center gap-2 cursor-pointer"
           >
             <IoArrowBackSharp />
             Back
