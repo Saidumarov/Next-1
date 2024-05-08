@@ -1,10 +1,13 @@
+"use client";
+import { ModeToggle } from "@/components/dark-light-module";
 import Link from "next/link";
-import { ModeToggle } from "../dark-light-module";
+import { useEffect } from "react";
 
 const Header = () => {
+  useEffect(() => {}, []);
   return (
     <>
-      <header className="text-gray-600 body-font shadow-md dark:shadow-slate-800">
+      <header className="text-gray-600 body-font shadow-md dark:shadow-slate-800 sticky top-0 z-10 bg-white dark:bg-slate-950">
         <div className="container mx-auto flex  p-5  items-center justify-between">
           <Link href={"/"}>
             <span className="ml-3 text-xl dark:text-white max-[400px]:text-[18px]">

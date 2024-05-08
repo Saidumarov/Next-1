@@ -1,4 +1,4 @@
-import Filter from "@/components/layout/filter";
+import Filter from "@/layout/filter";
 import Card from "@/components/shared/card";
 import { data } from "@/db";
 import React from "react";
