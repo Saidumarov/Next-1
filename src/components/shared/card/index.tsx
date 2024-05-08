@@ -1,15 +1,12 @@
 "use client";
 import { ProductT } from "@/types";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+
 const Card = ({ product }: { product: ProductT }) => {
-  const root = useRouter();
   return (
-    <>
-      <div className="xl:w-1/4 max-[1270px]:w-1/3 max-[975px]:w-1/2 max-[550px]:w-full p-4">
-        <div
-          onClick={() => root.push(`/product-deteiles/${product.id}`)}
-          className="bg-gray-100 rounded-lg dark:bg-slate-800 cursor-pointer"
-        >
+    <div className="xl:w-1/4 max-[1270px]:w-1/3 max-[975px]:w-1/2 max-[550px]:w-full p-4">
+      <Link href={`/product-deteiles/${product.id}`}>
+        <div className="bg-gray-100 rounded-lg dark:bg-slate-800 cursor-pointer">
           <img
             className="h-50 rounded w-full object-cover object-center mb-6"
             src={product.img}
@@ -39,8 +36,8 @@ const Card = ({ product }: { product: ProductT }) => {
             </p>
           </div>
         </div>
-      </div>
-    </>
+      </Link>
+    </div>
   );
 };
 
