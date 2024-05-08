@@ -6,8 +6,8 @@ const ProductDetailes = () => {
   const root = useRouter();
   return (
     <>
-      <section className="text-gray-600 body-font relative">
-        <div className="container mx-auto flex sm:flex-nowrap  pt-28 flex-wrap">
+      <section className="text-gray-600 body-font relative overflow-hidden">
+        <div className="container mx-auto flex  pt-28 flex-wrap min-[800px]:flex-nowrap pb-48 justify-between">
           <div
             onClick={() => root.back()}
             className="absolute z-10 top-10 text-black text-2xl dark:text-white flex items-center gap-2 cursor-pointer"
@@ -15,7 +15,7 @@ const ProductDetailes = () => {
             <IoArrowBackSharp />
             Back
           </div>
-          <div className=" md:w-1/2 rounded-lg overflow-hidden sm:mr-10 flex items-end relative">
+          <div className="max-[800px]:w-full rounded-lg overflow-hidden sm:mr-10 flex items-end relative">
             <img
               src="/images/det.png"
               alt=""
@@ -58,17 +58,17 @@ const ProductDetailes = () => {
                   </span>{" "}
                   Brussels
                 </p>
-                <p className="absolute pt-2">
+                <p className="absolute pt-2 max-[470px]:grid grid-cols-2">
                   <span className="text-nowrap text-black font-semibold dark:text-white">
                     Border Countries:
                   </span>
-                  <span className="bg-white p-2 shadow-md rounded-md ml-2 dark:bg-slate-400 dark:text-white">
+                  <span className="bg-white p-2 shadow-md rounded-md ml-2 dark:bg-slate-400 dark:text-white max-[470px]:mt-5  ">
                     France
                   </span>
-                  <span className="bg-white p-2 shadow-md rounded-md ml-2  dark:bg-slate-400 dark:text-white">
+                  <span className="bg-white p-2 shadow-md rounded-md ml-2  dark:bg-slate-400 dark:text-white max-[470px]:mt-5 ">
                     Germany
                   </span>
-                  <span className="bg-white p-2 shadow-md rounded-md ml-2  dark:bg-slate-400 dark:text-white">
+                  <span className="bg-white p-2 shadow-md rounded-md ml-2  dark:bg-slate-400 dark:text-white max-[470px]:mt-5 ">
                     Netherlands
                   </span>
                 </p>
