@@ -46,7 +46,7 @@ const ProductDetailes = () => {
     <>
       {isloading ? <LoadingProduct /> : null}
       <section className="text-gray-600 body-font relative overflow-hidden">
-        <div className="container mx-auto flex  pt-28 flex-wrap min-[800px]:flex-nowrap pb-48 justify-between">
+        <div className="container">
           <div
             onClick={() => root.back()}
             className="absolute shadow-md rounded-md pr-4 pl-2 p-2  top-10 text-black text-2xl dark:text-white flex items-center gap-2 cursor-pointer"
@@ -54,17 +54,18 @@ const ProductDetailes = () => {
             <IoArrowBackSharp />
             Back
           </div>
-          {data?.map((el) => {
+          {data?.map((el, i) => {
             let til = el?.languages;
             let obj;
             if (til) {
               obj = Object?.values(til);
             }
             if (el?.name?.common == common) {
-              console.log(el);
-
               return (
-                <>
+                <div
+                  className="mx-auto flex  pt-28 flex-wrap min-[800px]:flex-nowrap pb-48 justify-between"
+                  key={i}
+                >
                   <div className="max-[800px]:w-full w-[50%] h-[500px] max-[450px]:h-[350px] rounded-lg overflow-hidden sm:mr-10 flex items-end relative">
                     <img
                       src={el?.flags?.png}
@@ -153,7 +154,7 @@ const ProductDetailes = () => {
                       </div>
                     </div>
                   </div>
-                </>
+                </div>
               );
             }
           })}
