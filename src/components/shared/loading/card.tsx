@@ -5,7 +5,10 @@ export function SkeletonCard() {
   return (
     <>
       {data?.map((_, i) => (
-        <div className="xl:w-1/4 max-[1270px]:w-1/3 max-[975px]:w-1/2 max-[550px]:w-full p-4">
+        <div
+          key={i}
+          className="xl:w-1/4 max-[1270px]:w-1/3 max-[975px]:w-1/2 max-[550px]:w-full p-4"
+        >
           <div className="flex flex-col space-y-3">
             <Skeleton className="h-[300px]  rounded-xl" />
             <div className="space-y-2">
